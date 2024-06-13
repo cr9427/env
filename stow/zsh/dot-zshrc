@@ -28,6 +28,8 @@ fi
 # Source/Load zinit
 source "${ZINIT_HOME}/zinit.zsh"
 
+export ZSH_CUSTOM=$HOME/env/zsh
+
 # Add in Powerlevel10k
 zinit ice depth=1; zinit light romkatv/powerlevel10k
 
@@ -46,73 +48,34 @@ zinit snippet OMZP::git
 zinit snippet OMZP::sudo
 zinit snippet OMZP::kubectl
 zinit snippet OMZP::command-not-found
-zinit snippet https://github.com/cr9427/dotfiles/blob/main/oh-my-zsh/login.zsh
-zinit snippet https://github.com/cr9427/dotfiles/blob/main/oh-my-zsh/01_updateLists.zsh
-zinit snippet https://github.com/cr9427/dotfiles/blob/main/oh-my-zsh/PATH.zsh
-#zinit snippet https://github.com/cr9427/dotfiles/blob/main/oh-my-zsh/
+#zinit snippet https://github.com/cr9427/dotfiles/blob/main/oh-my-zsh/login.zsh
+zinit snippet $ZSH_CUSTOM/updateLists.zsh
+zinit snippet $ZSH_CUSTOM/PATH.zsh
+zinit snippet $ZSH_CUSTOM/ssh.zsh
+zinit snippet $ZSH_CUSTOM/locale.zsh
+zinit snippet $ZSH_CUSTOM/history.zsh
+zinit snippet $ZSH_CUSTOM/completions.zsh
+zinit snippet $ZSH_CUSTOM/zoxide.zsh
+zinit snippet $ZSH_CUSTOM/keybindings.zsh
 
 # Add packages
 zinit pack"bgn-binary+keys" for fzf
 
-# Load completions
-export ZSH_COMPDUMP=$HOME/.cache/zcompdump.`hostname -s`
-autoload -Uz compinit && compinit -d $ZSH_COMPDUMP
+# update completions
 zinit cdreplay -q
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# Keybindings
-#bindkey -e
-bindkey "^[[A" history-substring-search-up
-bindkey "^[[B" history-substring-search-down
-bindkey '^[w' kill-region
-
-# History
-HISTSIZE=5000
-HISTFILE=$HOME/.cache/zhistory.`hostname -s`
-SAVEHIST=$HISTSIZE
-HISTDUP=erase
-setopt appendhistory
-setopt sharehistory
-setopt hist_ignore_space
-setopt hist_ignore_all_dups
-setopt hist_save_no_dups
-setopt hist_ignore_dups
-setopt hist_find_no_dups
-setopt hist_expire_dups_first
-setopt hist_verify
-
-# Completion styling
-zstyle ':completion:*' completer _complete
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z} l:|=* r:|=*'
-zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
-zstyle ':completion:*' menu no
-zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
-zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
-
 [[ -L $HOME/.local/bin ]] || ln -s $HOME/run/$OS/bin $HOME/.local/bin
 
 # Shell integrations
-#eval "$(fzf --zsh)"
-export _ZO_DATA_DIR="$HOME/.cache/zoxide.`hostname -s`"
-[[ -f $HOME/.local/bin/zoxide ]] || curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
-eval "$(zoxide init --cmd cd zsh)"
+eval "$(fzf --zsh)"
 
-
-
-# source aliases
-#
+# Source aliases
 if [ -f $HOME/.aliases ]; then
    . $HOME/.aliases
 fi
-
-# You may need to manually set your language environment
-LC_ALL="de_DE.UTF-8"
-export LC_ALL
-LANG="de_DE.UTF-8"
-LANGUAGE="$LANG"
-export LANG LANGUAGE
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
