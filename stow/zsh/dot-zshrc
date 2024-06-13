@@ -44,11 +44,33 @@ zinit light zdharma-continuum/zinit-annex-patch-dl
 
 # Add in snippets
 zinit snippet OMZ::lib/directories.zsh
+#zinit snippet OMZP::aliases
+#zinit snippet OMZP::brew
+#zinit snippet OMZP::colored-man-pages
+#zinit snippet OMZP::colorize
+#zinit snippet OMZP::common-aliases
+#zinit snippet OMZP::copybuffer
+#zinit snippet OMZP::copypath
+#zinit snippet OMZP::direnv
+#zinit snippet OMZP::dirhistory
+#zinit snippet OMZP::docker-compose
+#zinit snippet OMZP::docker-machine
+#zinit snippet OMZP::docker
+#zinit snippet OMZP::dotenv
+#zinit snippet OMZP::extract
+#zinit snippet OMZP::fzf
+#zinit snippet OMZP::helm
+#zinit snippet OMZP::nmap
+#zinit snippet OMZP::rsync
+#zinit snippet OMZP::terraform
+#zinit snippet OMZP::# tmux
+#zinit snippet OMZP::# vagrant
+#zinit snippet OMZP::wakeonlan
+#zinit snippet OMZP::web-search
 zinit snippet OMZP::git
 zinit snippet OMZP::sudo
 zinit snippet OMZP::kubectl
 zinit snippet OMZP::command-not-found
-#zinit snippet https://github.com/cr9427/dotfiles/blob/main/oh-my-zsh/login.zsh
 zinit snippet $ZSH_CUSTOM/updateLists.zsh
 zinit snippet $ZSH_CUSTOM/PATH.zsh
 zinit snippet $ZSH_CUSTOM/ssh.zsh
@@ -57,6 +79,13 @@ zinit snippet $ZSH_CUSTOM/history.zsh
 zinit snippet $ZSH_CUSTOM/completions.zsh
 zinit snippet $ZSH_CUSTOM/zoxide.zsh
 zinit snippet $ZSH_CUSTOM/keybindings.zsh
+zinit snippet $ZSH_CUSTOM/you-should-use.zsh
+zinit snippet $ZSH_CUSTOM/proxy.zsh
+zinit snippet $ZSH_CUSTOM/mysql.zsh
+zinit snippet $ZSH_CUSTOM/homebrew.zsh
+zinit snippet $ZSH_CUSTOM/docker.zsh
+zinit snippet $ZSH_CUSTOM/bc.zsh
+zinit snippet $ZSH_CUSTOM/automake.zsh
 
 # Add packages
 zinit pack"bgn-binary+keys" for fzf
