@@ -71,6 +71,7 @@ zinit snippet OMZP::git
 zinit snippet OMZP::sudo
 zinit snippet OMZP::kubectl
 zinit snippet OMZP::command-not-found
+zinit snippet $ZSH_CUSTOM/login.zsh
 zinit snippet $ZSH_CUSTOM/updateLists.zsh
 zinit snippet $ZSH_CUSTOM/PATH.zsh
 zinit snippet $ZSH_CUSTOM/ssh.zsh
@@ -96,7 +97,7 @@ zinit cdreplay -q
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-[[ -L $HOME/.local/bin ]] || ln -s $HOME/run/$OS/bin $HOME/.local/bin
+rm $HOME/.local/bin &&  ln -s $HOME/run/$OS/bin $HOME/.local/bin
 
 # Shell integrations
 eval "$(fzf --zsh)"
