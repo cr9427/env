@@ -5,6 +5,7 @@ export RPS1=$'%{\e[0;33m%}(%{\e[0m%}%?%{\e[0;33m%})%T%{\e[0m%}'
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
+POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
@@ -30,17 +31,14 @@ source "${ZINIT_HOME}/zinit.zsh"
 # Add in Powerlevel10k
 zinit ice depth=1; zinit light romkatv/powerlevel10k
 
-zinit pack"binary+keys" for fzf
-zinit pack for dircolors-material
-
 # Add in zsh plugins
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
 zinit light Aloxaf/fzf-tab
 zinit light MichaelAquilina/zsh-you-should-use
-zinit light rupa/z
-zinit light trapd00r/LS_COLORS
+zinit light zdharma-continuum/zinit-annex-bin-gem-node
+zinit light zdharma-continuum/zinit-annex-patch-dl
 
 # Add in snippets
 zinit snippet OMZ::lib/directories.zsh
@@ -48,24 +46,31 @@ zinit snippet OMZP::git
 zinit snippet OMZP::sudo
 zinit snippet OMZP::kubectl
 zinit snippet OMZP::command-not-found
+zinit snippet https://github.com/cr9427/dotfiles/blob/main/oh-my-zsh/login.zsh
+zinit snippet https://github.com/cr9427/dotfiles/blob/main/oh-my-zsh/01_updateLists.zsh
+zinit snippet https://github.com/cr9427/dotfiles/blob/main/oh-my-zsh/PATH.zsh
+#zinit snippet https://github.com/cr9427/dotfiles/blob/main/oh-my-zsh/
+
+# Add packages
+zinit pack"bgn-binary+keys" for fzf
 
 # Load completions
-autoload -Uz compinit && compinit
-
+export ZSH_COMPDUMP=$HOME/.cache/zcompdump.`hostname -s`
+autoload -Uz compinit && compinit -d $ZSH_COMPDUMP
 zinit cdreplay -q
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Keybindings
-bindkey -e
-bindkey '^p' history-search-backward
-bindkey '^n' history-search-forward
+#bindkey -e
+bindkey "^[[A" history-substring-search-up
+bindkey "^[[B" history-substring-search-down
 bindkey '^[w' kill-region
 
 # History
 HISTSIZE=5000
-HISTFILE=~/.zsh_history
+HISTFILE=$HOME/.cache/zhistory.`hostname -s`
 SAVEHIST=$HISTSIZE
 HISTDUP=erase
 setopt appendhistory
@@ -75,35 +80,32 @@ setopt hist_ignore_all_dups
 setopt hist_save_no_dups
 setopt hist_ignore_dups
 setopt hist_find_no_dups
+setopt hist_expire_dups_first
+setopt hist_verify
 
 # Completion styling
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+zstyle ':completion:*' completer _complete
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z} l:|=* r:|=*'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
+[[ -L $HOME/.local/bin ]] || ln -s $HOME/run/$OS/bin $HOME/.local/bin
+
 # Shell integrations
-eval "$(fzf --zsh)"
+#eval "$(fzf --zsh)"
+export _ZO_DATA_DIR="$HOME/.cache/zoxide.`hostname -s`"
+[[ -f $HOME/.local/bin/zoxide ]] || curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
 eval "$(zoxide init --cmd cd zsh)"
 
-########
 
-# If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
 # source aliases
 #
 if [ -f $HOME/.aliases ]; then
    . $HOME/.aliases
 fi
-
-# 
-if [ ! -d ~/.cache ]; then
-  mkdir ~/.cache
-fi
-
-export ZSH_COMPDUMP=$HOME/.cache/zcompdump.`hostname -s`
 
 # You may need to manually set your language environment
 LC_ALL="de_DE.UTF-8"
@@ -118,4 +120,3 @@ if [[ -n $SSH_CONNECTION ]]; then
 else
   export EDITOR='vim'
 fi
-POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
