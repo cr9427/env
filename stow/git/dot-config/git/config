@@ -1,0 +1,8 @@
+# Put this in your ~/.gitconfig or ~/.config/git/config
+# Windows users: "~" is your profile's home directory, e.g. C:\Users\<YourName>
+[user]
+  name = Your Full Name
+  email = your@email.tld
+[color]
+  # Enable colors in color-supporting terminals
+  ui = auto
