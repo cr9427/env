@@ -7,6 +7,6 @@
 #   _ZO_RESOLVE_SYMLINKS Resolve symlinks when storing paths
 export _ZO_DATA_DIR="$HOME/.cache/zoxide.`hostname -s`"
 
-[[ -f $HOME/.local/bin/zoxide ]] || curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
+#[[ -f $HOME/.local/bin/zoxide ]] || curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
 
 eval "$(zoxide init --cmd cd zsh)"
