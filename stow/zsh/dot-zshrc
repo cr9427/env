@@ -52,6 +52,12 @@ zinit cdreplay -q
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+# Set directory options
+setopt auto_cd
+setopt auto_pushd
+setopt pushd_ignore_dups
+setopt pushdminus
+
 ########
 
 # If you come from bash you might have to change your $PATH.
