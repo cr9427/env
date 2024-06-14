@@ -15,8 +15,6 @@ if [ -d $ZSH_CUSTOM/completions ]; then
   fpath=($ZSH_CUSTOM/completions $fpath)
 fi
 
-autoload -Uz compinit && compinit -d $ZSH_COMPDUMP
-
 # Completion styling
 zstyle ':completion:*' completer _complete
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z} l:|=* r:|=*'
