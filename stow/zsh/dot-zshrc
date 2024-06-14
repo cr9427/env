@@ -43,30 +43,31 @@ zinit light zdharma-continuum/zinit-annex-bin-gem-node
 zinit light zdharma-continuum/zinit-annex-patch-dl
 
 # Add in snippets
-zinit snippet OMZ::lib/directories.zsh
-#zinit snippet OMZP::aliases
-#zinit snippet OMZP::brew
-#zinit snippet OMZP::colored-man-pages
-#zinit snippet OMZP::colorize
-#zinit snippet OMZP::common-aliases
-#zinit snippet OMZP::copybuffer
-#zinit snippet OMZP::copypath
-#zinit snippet OMZP::direnv
-#zinit snippet OMZP::dirhistory
+zinit snippet OMZL::directories.zsh
+zinit snippet OMZL::clipboard.zsh
+zinit snippet OMZL::functions.zsh
+# zinit snippet OMZP::aliases           # irgendwie läd er nicht alle Files, noch mal ansehen
+#zinit snippet OMZP::brew               # braucht man das wirklich?
+zinit snippet OMZP::colored-man-pages
+zinit snippet OMZP::colorize
+zinit snippet OMZP::copybuffer
+zinit snippet OMZP::copyfile
+zinit snippet OMZP::copypath
+#zinit snippet OMZP::direnv             # das probieren wir mal irgendwann aus
+zinit snippet OMZP::dirhistory
 #zinit snippet OMZP::docker-compose
 #zinit snippet OMZP::docker-machine
 #zinit snippet OMZP::docker
-#zinit snippet OMZP::dotenv
-#zinit snippet OMZP::extract
-#zinit snippet OMZP::fzf
-#zinit snippet OMZP::helm
-#zinit snippet OMZP::nmap
-#zinit snippet OMZP::rsync
+zinit snippet OMZP::dotenv
+zinit snippet OMZP::extract
+zinit snippet OMZP::helm
+zinit snippet OMZP::nmap
+zinit snippet OMZP::rsync
 #zinit snippet OMZP::terraform
-#zinit snippet OMZP::# tmux
-#zinit snippet OMZP::# vagrant
-#zinit snippet OMZP::wakeonlan
-#zinit snippet OMZP::web-search
+#zinit snippet OMZP::tmux
+#zinit snippet OMZP::vagrant
+zinit snippet OMZP::wakeonlan
+zinit snippet OMZP::web-search
 zinit snippet OMZP::git
 zinit snippet OMZP::sudo
 zinit snippet OMZP::kubectl
@@ -87,9 +88,11 @@ zinit snippet $ZSH_CUSTOM/homebrew.zsh
 zinit snippet $ZSH_CUSTOM/docker.zsh
 zinit snippet $ZSH_CUSTOM/bc.zsh
 zinit snippet $ZSH_CUSTOM/automake.zsh
+zinit snippet $ZSH_CUSTOM/less.zsh
+zinit snippet $ZSH_CUSTOM/aliases.zsh
 
 # Add packages
-zinit pack"bgn-binary+keys" for fzf
+zinit pack"binary+keys" for fzf
 
 # update completions
 zinit cdreplay -q
