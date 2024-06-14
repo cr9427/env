@@ -10,6 +10,11 @@ if [ -d $HOMEBREW_PREFIX/share/zsh-completions ]; then
   fpath=($HOMEBREW_PREFIX/share/zsh-completions $fpath)
 fi
 
+# Setup a custom completions directory
+if [ -d $ZSH_CUSTOM/completions ]; then
+  fpath=($ZSH_CUSTOM/completions $fpath)
+fi
+
 autoload -Uz compinit && compinit -d $ZSH_COMPDUMP
 
 # Completion styling
