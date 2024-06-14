@@ -18,4 +18,4 @@ alias tf='tail -f'
 alias tt='telnet'
 alias unstowth='stow --dotfiles --verbose --delete --target ~/'
 alias zrc='vim ~/.zshrc'
-alias lspath="echo $PATH | tr ':' '\n'"
+alias lspath="echo ${PATH} | tr ':' '\n'"
