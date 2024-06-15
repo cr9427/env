@@ -25,7 +25,7 @@
 	<key>EnableProxyIcon</key>
 	<false/>
 	<key>FocusFollowsMouse</key>
-	<true/>
+	<false/>
 	<key>HapticFeedbackForEsc</key>
 	<false/>
 	<key>HideTab</key>
