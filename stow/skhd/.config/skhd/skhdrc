@@ -23,7 +23,9 @@ alt - k: yabai -m display --focus west
 alt - j: yabai -m display --focus east
 #
 ## rotate layout clockwise
-shift + alt - r : yabai -m space --rotate 270
+shift + cmd - j : yabai -m space --rotate 270
+shift + cmd - k : yabai -m space --rotate 90
+
 ## flip along y-axis
 shift + alt - y : yabai -m space --mirror y-axis
 ## flip along x-axis
@@ -59,5 +61,5 @@ shift + alt - 4 : yabai -m window --space 4 --focus
 shift + alt - 5 : yabai -m window --space 5 --focus
 
 ## rotate windows in a space
-shift + alt - j : yabai_cycle_clockwise.sh
-shift + alt - k : yabai_cycle_counterclockwise.sh
+cmd - j : yabai_cycle_clockwise.sh
+cmd - k : yabai_cycle_counterclockwise.sh
