@@ -3,6 +3,11 @@
 [user]
   name = Holm der Kannenzwerg
   email = hk@crylle.net
+[core]
+  editor = vi
+  excludesFile = ~/.config/git/ignore
+  autocrlf = input
+  pager = cat
 [alias]
   c = commit
   ca = commit -a
