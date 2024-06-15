@@ -5,7 +5,7 @@
 #   _ZO_FZF_OPTS         Custom flags to pass to fzf
 #   _ZO_MAXAGE           Maximum total age after which entries start getting deleted
 #   _ZO_RESOLVE_SYMLINKS Resolve symlinks when storing paths
-export _ZO_DATA_DIR="$HOME/.cache/zoxide.`hostname -s`"
+export _ZO_DATA_DIR="${HOME}/.cache/zoxide"
 
 #[[ -f $HOME/.local/bin/zoxide ]] || curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
 
