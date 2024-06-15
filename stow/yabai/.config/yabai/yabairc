@@ -25,15 +25,15 @@ yabai -m space 5 --label etc
 # specific space settings
 yabai -m config --space mail  layout stack
 yabai -m config --space notes layout stack
-yabai -m config --space web   layout float
+#yabai -m config --space notes etc    float
 
 # window rules
-yabai -m rule --add app="^Mail$" space=mail manage=on native-fullscreen=on
+yabai -m rule --add app="^Mail$" space=mail manage=on
 yabai -m rule --add app="^Safari$" space=^web
 yabai -m rule --add app="^Firefox$" space=^web
 yabai -m rule --add app="^Terminal$" space=^work
 yabai -m rule --add app="^iTerm2$" space=^work 
-yabai -m rule --add app="^Notizen$" space=^notes manage=on native-fullscreen=on
+yabai -m rule --add app="^Notizen$" space=^notes manage=on
 
 # default layout (can be bsp, stack or float)
 yabai -m config layout bsp

@@ -26,6 +26,8 @@
 	<false/>
 	<key>FocusFollowsMouse</key>
 	<false/>
+	<key>FunctionKey</key>
+	<integer>10</integer>
 	<key>HapticFeedbackForEsc</key>
 	<false/>
 	<key>HideTab</key>

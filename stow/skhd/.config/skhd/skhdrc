@@ -11,27 +11,25 @@
 ctrl + alt - q : yabai --stop-service
 ctrl + alt - s : yabai --start-service
 ctrl + alt - r : yabai --restart-service
-#crtl + alt - x : skhd --restart-service
 
-# change window focus within space
+# focus window within space
 cmd - down : yabai -m window --focus south
 cmd - up : yabai -m window --focus north
 cmd - left : yabai -m window --focus west
 cmd - right : yabai -m window --focus east
 
 ##change focus between external displays (left and right)
-#alt - s: yabai -m display --focus west
-#alt - g: yabai -m display --focus east
+alt - k: yabai -m display --focus west
+alt - j: yabai -m display --focus east
 #
 ## rotate layout clockwise
-#shift + alt - r : yabai -m space --rotate 270
+shift + alt - r : yabai -m space --rotate 270
 ## flip along y-axis
-#shift + alt - y : yabai -m space --mirror y-axis
+shift + alt - y : yabai -m space --mirror y-axis
 ## flip along x-axis
-#shift + alt - x : yabai -m space --mirror x-axis
+shift + alt - x : yabai -m space --mirror x-axis
 ## toggle window float
-#shift + alt - t : yabai -m window --toggle float --grid 4:4:1:1:2:2
-#
+shift + alt - t : yabai -m window --toggle float --grid 4:4:1:1:2:2
 ## swap windows
 #shift + alt - j : yabai -m window --swap south
 #shift + alt - k : yabai -m window --swap north
@@ -45,11 +43,21 @@ cmd - right : yabai -m window --focus east
 #ctrl + alt - l : yabai -m window --warp east
 #
 ## maximize a window
-#shift + alt - m : yabai -m window --toggle zoom-fullscreen
+shift + alt - m : yabai -m window --toggle zoom-fullscreen
 #
 ## balance out tree of windows (resize to occupy same area)
-cmd - b : yabai -m space --balance
+shift + alt - b : yabai -m space --balance
+
+# move window to display focused before the current one
+shift + alt - w :yabai -m window --display recent
+
+# move window to space 2 and switch to space 2 (works with both SIP enabled and disabled)
+shift + alt - 1 : yabai -m window --space 1 --focus
+shift + alt - 2 : yabai -m window --space 2 --focus
+shift + alt - 3 : yabai -m window --space 3 --focus
+shift + alt - 4 : yabai -m window --space 4 --focus
+shift + alt - 5 : yabai -m window --space 5 --focus
 
 ## rotate windows in a space
-#fn + ctrl - rigth : yabai_cycle_clockwise.sh
-#fn + ctrl - left : yabai_cycle_counterclockwise.sh
+shift + alt - j : yabai_cycle_clockwise.sh
+shift + alt - k : yabai_cycle_counterclockwise.sh
