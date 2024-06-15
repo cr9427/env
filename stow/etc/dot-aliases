@@ -19,3 +19,6 @@ alias tt='telnet'
 alias unstowth='stow --dotfiles --verbose --delete --target ~/'
 alias zrc='vim ~/.zshrc'
 alias lspath="echo ${PATH} | tr ':' '\n'"
+alias yrc='vim ~/.config/yabai/yabairc'
+alias src='vim ~/.config/skhd/skhdrc'
+alias grc='vim ~/.config/git/config'
