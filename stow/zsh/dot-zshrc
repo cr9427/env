@@ -56,7 +56,7 @@ zinit snippet OMZL::functions.zsh
 # zinit snippet OMZP::aliases           # irgendwie läd er nicht alle Files, noch mal ansehen
 #zinit snippet OMZP::brew               # braucht man das wirklich?
 zinit snippet OMZP::colored-man-pages
-zinit snippet OMZP::colorize
+#zinit snippet OMZP::colorize
 zinit snippet OMZP::copybuffer
 zinit snippet OMZP::copyfile
 zinit snippet OMZP::copypath
