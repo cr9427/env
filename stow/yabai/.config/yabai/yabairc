@@ -27,14 +27,6 @@ yabai -m config --space mail  layout stack
 yabai -m config --space notes layout stack
 #yabai -m config --space notes etc    float
 
-# window rules
-yabai -m rule --add app="^Mail$" space=mail manage=on
-yabai -m rule --add app="^Safari$" space=^web
-yabai -m rule --add app="^Firefox$" space=^web
-yabai -m rule --add app="^Terminal$" space=^work
-yabai -m rule --add app="^iTerm2$" space=^work 
-yabai -m rule --add app="^Notizen$" space=^notes manage=on
-
 # default layout (can be bsp, stack or float)
 yabai -m config layout bsp
 
@@ -52,7 +44,7 @@ yabai -m config window_gap 2
 yabai -m config mouse_follows_focus off
 
 # set focus follows mouse mode (default: off, options: off, autoraise, autofocus)
-yabai -m config focus_follows_mouse autofocus
+yabai -m config focus_follows_mouse autoraise
 
 # modifier for clicking and dragging with mouse
 yabai -m config mouse_modifier fn
@@ -72,5 +64,12 @@ yabai -m config window_opacity off
 yabai -m config active_window_opacity 1.0
 yabai -m config normal_window_opacity 0.5
 
-# unmanaged apps
+# window rules
 yabai -m rule --add app!="Terminal|iTerm|iTerm2|Safari|Firefox" manage=off sticky=on sub-layer=auto
+yabai -m rule --add app="^Mail$" space=^mail manage=on sticky=off
+yabai -m rule --add app="^Safari$" space=^web
+yabai -m rule --add app="^Firefox$" space=^web
+yabai -m rule --add app="^Terminal$" space=^work
+yabai -m rule --add app="^iTerm2$" space=^work 
+yabai -m rule --add app="^Notizen$" space=^notes manage=on sticky=off
+
