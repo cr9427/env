@@ -35,7 +35,7 @@ set visualbell          " but leave on a visual bell
 set hlsearch            " highlighted search results
 set showmatch           " show matching bracket
 set ignorecase          " all your searches will be case insensitive
-set smartcase           " your search will be case sensitive if it contains an uppercase letter
+"set smartcase           " your search will be case sensitive if it contains an uppercase letter
 
 
 " other

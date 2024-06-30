@@ -68,10 +68,10 @@ yabai -m config normal_window_opacity 0.5
 yabai -m rule --add app=".*" sub-layer=normal
 yabai -m rule --add app!="Terminal|iTerm|iTerm2|Safari|Firefox" manage=off sticky=on sub-layer=above
 yabai -m rule --add app="^Mail$" title=".*" space=^mail manage=on sticky=off
-yabai -m rule --add app="^Safari$" space=^web 
+yabai -m rule --add app="^Safari$" space=^web
 yabai -m rule --add app="^Firefox$" space=^web
 yabai -m rule --add app="^Terminal$" space=^work
-yabai -m rule --add app="^iTerm2$" space=^work 
+yabai -m rule --add app="^iTerm2$" space=^work
 yabai -m rule --add app="^Notizen$" title!="^Neue Notiz$" space=^notes manage=on sticky=off
 yabai -m rule --add app="^Notizen$" title="^Neue Notiz$" manage=off sticky=on sub-layer=above
-
+yabai -m rule --add app="^LibreOffice$" space=^etc manage=on sticky=off sub-layer=normal
