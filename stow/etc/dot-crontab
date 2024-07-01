@@ -23,5 +23,5 @@ MAILTO="admin+crontab@crylle.net"
 #@weekly Run at every Sunday at midnight UTC
 #
 #*/2 * * * *  echo "crontab test"
-1  */4 * * * cd $HOME/env && git stash && git pull
-10 */4 * * * cd $HOME/env/stow && stow --dotfiles --verbose --stow --target ~/ *
+1  * * * * cd $HOME/env && git stash && git pull
+5  * * * * cd $HOME/env/stow && stow --dotfiles --verbose --stow --target ~/ *
