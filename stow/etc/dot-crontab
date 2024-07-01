@@ -1,4 +1,5 @@
 SHELL=/bin/sh
+MAILTO="admin+dev2@crylle.net"
 # You can also override PATH, but by default, newer versions inherit it from the environment
 #PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 
@@ -15,4 +16,12 @@ SHELL=/bin/sh
 #47  6	*  *  7	test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.weekly )
 #52  6	1  *  *	test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.monthly )
 #
-5 */4 * * * cd $HOME/env/stow && stow --dotfiles --verbose --stow --target ~/ *
+#@midnight
+#@reboot
+#@hourly Run at the start of each hour
+#@daily Run every day at midnight UTC
+#@weekly Run at every Sunday at midnight UTC
+#
+#*/2 * * * *  echo "crontab test"
+5  */4 * * * cd $HOME/env && git pull
+15 */4 * * * cd $HOME/env/stow && stow --dotfiles --verbose --stow --target ~/ *
