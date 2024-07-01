@@ -1,5 +1,5 @@
 SHELL=/bin/sh
-MAILTO="admin+crontab@crylle.net"
+MAILTO="admin+cron@crylle.net"
 # You can also override PATH, but by default, newer versions inherit it from the environment
 #PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 
