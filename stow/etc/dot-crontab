@@ -1,5 +1,5 @@
 SHELL=/bin/sh
-MAILTO="admin+dev2@crylle.net"
+MAILTO="admin+crontab@crylle.net"
 # You can also override PATH, but by default, newer versions inherit it from the environment
 #PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 
@@ -23,5 +23,5 @@ MAILTO="admin+dev2@crylle.net"
 #@weekly Run at every Sunday at midnight UTC
 #
 #*/2 * * * *  echo "crontab test"
-5  */4 * * * cd $HOME/env && git pull
-15 */4 * * * cd $HOME/env/stow && stow --dotfiles --verbose --stow --target ~/ *
+1  */4 * * * cd $HOME/env && git stash && git pull
+10 */4 * * * cd $HOME/env/stow && stow --dotfiles --verbose --stow --target ~/ *
