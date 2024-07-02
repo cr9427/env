@@ -1,2 +1,11 @@
-alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"
-alias mac-xca="/Applications/xca.app/Contents/MacOS/xca  --database=xca@sql.crylle.local:3307/QMYSQL:xca_ca --sqlpass=file:${HOME}/.config/xca/sql-pwd --password=file:${HOME}/.config/xca/pwd"
+if [ "$OS" = "aarch64-unknown-linux-gnu" ]; then
+  alias ll='eza --color=always --long --header --icons=always --smart-group'
+  alias la='eza --color=always --long --header --icons=always --smart-group --all'
+else
+  alias ll='eza --color=always --long --header --icons=always --smart-group --git --git-repos'
+  alias la='eza --color=always --long --header --icons=always --smart-group --all --git --git-repos'
+fi
+
+if [ "$OS" = "arm-apple-darwin23.5.0" ]; then
+  alias mac-xca='/Applications/xca.app/Contents/MacOS/xca  --database=xca@sql.crylle.local:3307/QMYSQL:xca_ca --sqlpass=file:${HOME}/.config/xca/sql-pwd --password=file:${HOME}/.config/xca/pwd'
+fi
