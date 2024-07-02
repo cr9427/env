@@ -24,7 +24,7 @@ MAILTO="admin+cron@crylle.net"
 #@montly
 #
 #*/2 * * * *  echo "crontab test"
-1  * * * * cd $HOME/env && git stash && git pull
+1  * * * * cd $HOME/env && git stash && git pull > /dev/null
 5  * * * * cd $HOME/env/stow && stow --dotfiles --verbose --stow --target ~/ *
 @daily xca --no-gui --database=xca@sql.crylle.local:3307/QMYSQL:xca_ca --sqlpass=file:${HOME}/.xca/sql-pwd --password=file:${HOME}/.xca/pwd --crlgen=12 --pem --print > /nas/www/ca.crl
 @daily xca --no-gui --database=xca@sql.crylle.local:3307/QMYSQL:xca_ca --sqlpass=file:${HOME}/.xca/sql-pwd --password=file:${HOME}/.xca/pwd --crlgen=93 --pem --print > /nas/www/ca2.crl
