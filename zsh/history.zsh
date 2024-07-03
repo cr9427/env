@@ -1,8 +1,8 @@
 # History
-HISTSIZE=5000
-HISTFILE=$HOME/.cache/zhistory.`hostname -s`
-SAVEHIST=$HISTSIZE
-HISTDUP=erase
+export HISTSIZE=5000
+export HISTFILE=$HOME/.cache/zhistory.`hostname -s`
+export SAVEHIST=$HISTSIZE
+export HISTDUP=erase
 setopt appendhistory
 setopt sharehistory
 setopt hist_ignore_space
