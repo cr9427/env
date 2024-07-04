@@ -15,3 +15,6 @@ setopt hist_verify
 
 export HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND='bg=#d33682,fg=#002b36,bold'
 export HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_NOT_FOUND='bg=#dc322f,fg=#002b36,bold'
+
+set show-all-if-ambiguous on
+set completion-ignore-case on

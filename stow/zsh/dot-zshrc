@@ -12,24 +12,24 @@ setopt promptsubst
 zinit ice lucid depth=1 atload'source ~/.p10k.zsh; _p9k_precmd' nocd
 zinit light romkatv/powerlevel10k
 
+
 # Turbo load plugins
-zinit wait'0a' lucid load for \
+zinit wait lucid load for \
     zdharma-continuum/zinit-annex-bin-gem-node \
     zdharma-continuum/zinit-annex-patch-dl \
     MichaelAquilina/zsh-you-should-use \
     Aloxaf/fzf-tab \
-  atinit"ZINIT[COMPINIT_OPTS]=-C; zicompinit; zicdreplay" \
-    zsh-users/zsh-syntax-highlighting \
   atload"!_zsh_autosuggest_start" \
     zsh-users/zsh-autosuggestions \
+  atinit"ZINIT[COMPINIT_OPTS]=-C; zicompinit; zicdreplay" \
+    zsh-users/zsh-syntax-highlighting \
   blockf atpull'zinit creinstall -q .' \
     zsh-users/zsh-completions \
   src"fzf-git.sh" \
     junegunn/fzf-git.sh.git
 
-zinit load zsh-users/zsh-history-substring-search
-zinit ice wait'0b' lucid atload'_history_substring_search_config'
-
+#zinit light zsh-users/zsh-history-substring-search
+#zinit ice lucid atload'_history_substring_search_config'
 zinit ice wait lucid from"gh-r" id-as"fzf" cp"fzf -> ${HOME}/run/${OS}/bin"
 zinit light junegunn/fzf-bin
 zinit ice wait lucid from"gh-r" id-as"fd" mv"fd* -> fd" cp"fd/fd -> ${HOME}/run/${OS}/bin"
@@ -75,8 +75,8 @@ zinit wait lucid for \
 
 source ~/env/zsh/aliases.zsh
 source ~/env/zsh/history.zsh
-source ~/env/zsh/completions.zsh
 source ~/env/zsh/keybindings.zsh
+source ~/env/zsh/completions.zsh
 source ~/env/zsh/zoxide.zsh
 source ~/env/zsh/you-should-use.zsh
 source ~/env/zsh/proxy.zsh
