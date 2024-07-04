@@ -59,7 +59,7 @@ zinit wait lucid for \
     OMZP::git \
     OMZP::sudo \
     OMZP::kubectl \
-    OMZP::command-not-found 
+    OMZP::command-not-found
     
 #    OMZP::aliases \            # den möchte ich,  aber die svn option ist noch unklar
 #    OMZP::colored-man-pages \ # das ist nicht uninteressant
