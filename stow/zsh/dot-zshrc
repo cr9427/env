@@ -42,7 +42,6 @@ zinit light ajeetdsouza/zoxide
 # Turbo load snippets
 zinit wait lucid for \
     OMZL::git.zsh \
-    OMZL::directories.zsh \
     OMZL::clipboard.zsh \
     OMZL::termsupport.zsh \
     OMZL::functions.zsh \
@@ -73,6 +72,7 @@ zinit wait lucid for \
 #    OMZP::tmux \
 #    OMZP::vagrant \
 
+source ~/env/zsh/directories.zsh
 source ~/env/zsh/aliases.zsh
 source ~/env/zsh/history.zsh
 source ~/env/zsh/keybindings.zsh
@@ -92,5 +92,3 @@ source ~/env/zsh/k9s.zsh
 # Load completions
 autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
-#
-alias ll='eza --color=always --long --header --icons=always --smart-group --git --git-repos'
