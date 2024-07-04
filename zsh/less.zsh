@@ -1,2 +1,2 @@
-export LESSHISTFILE=$HOME/.cache/lesshistory.`hostname -s`
-less_termcap[md]="${fg_bold[blue]}"
+export LESSHISTFILE=${HOME}/.cache/lesshistory.${HOST}
+# less_termcap[md]="${fg_bold[blue]}"

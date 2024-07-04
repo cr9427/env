@@ -1,5 +1,3 @@
-export ZSH_COMPDUMP=$HOME/.cache/zcompdump.`hostname -s`
-
 # if we are on Ubuntu with zsh installed
 if [ -d  /usr/share/zsh/vendor-completions ]; then
   fpath=(/usr/share/zsh/vendor-completions $fpath)
@@ -10,15 +8,8 @@ if [ -d $HOMEBREW_PREFIX/share/zsh-completions ]; then
   fpath=($HOMEBREW_PREFIX/share/zsh-completions $fpath)
 fi
 
-# Setup a custom completions directory
-if [ -d $ZSH_CUSTOM/completions ]; then
-  fpath=($ZSH_CUSTOM/completions $fpath)
-fi
-
 # Completion styling
 zstyle ':completion:*' completer _complete
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z} l:|=* r:|=*'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' menu no
-zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
-zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'

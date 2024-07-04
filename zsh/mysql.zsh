@@ -1,1 +1,1 @@
-export MYSQL_HISTFILE="$HOME/.cache/mysql.`hostname -s`"
+export MYSQL_HISTFILE="${HOME}/.cache/mysql.${HOST}"

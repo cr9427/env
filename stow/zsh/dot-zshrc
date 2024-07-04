@@ -1,130 +1,92 @@
-# Set prompt.
-export PS1=$'%{\e[0;33m%}%n@%{\e[0;33m%}%B%m%b%{\e[0;33m%}[%{\e[0m%}%~%{\e[0;33m%}]%{\e[0;33m%}%(!.#.>)%{\e[0m%} '
-export RPS1=$'%{\e[0;33m%}(%{\e[0m%}%?%{\e[0;33m%})%T%{\e[0m%}'
+source ~/env/zsh/login.zsh
+source ~/env/zsh/updateLists.zsh
+source ~/env/zsh/aliases.zsh
+source ~/env/zsh/prompt.zsh
+source ~/env/zsh/homebrew.zsh
+source ~/env/zsh/p10k.zsh
+source ~/env/zsh/zinit.zsh
+source ~/env/zsh/ssh.zsh
+source ~/env/zsh/locale.zsh
 
-# Source aliases
-if [ -f $HOME/.aliases ]; then
-   . $HOME/.aliases
-fi
+# recommended by https://zdharma-continuum.github.io/zinit/wiki/Example-Oh-My-Zsh-setup/
+#
+setopt promptsubst
 
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
+# Turbo load plugins
+zinit wait lucid load for \
+    zdharma-continuum/zinit-annex-bin-gem-node \
+    zdharma-continuum/zinit-annex-patch-dl \
+    MichaelAquilina/zsh-you-should-use \
+    Aloxaf/fzf-tab \
+  atinit"ZINIT[COMPINIT_OPTS]=-C; zicompinit; zicdreplay" \
+    zsh-users/zsh-syntax-highlighting \
+  atload"!_zsh_autosuggest_start" \
+    zsh-users/zsh-autosuggestions \
+  blockf atpull'zinit creinstall -q .' \
+    zsh-users/zsh-completions \
+  src"fzf-git.sh" \
+    junegunn/fzf-git.sh.git 
 
-# Source brew
-if [[ -f "/opt/homebrew/bin/brew" ]] then
-  # If you're using macOS, you'll want this enabled
-  eval "$(/opt/homebrew/bin/brew shellenv)"
-fi
+zinit light zsh-users/zsh-history-substring-search
+zinit ice wait lucid atload'_history_substring_search_config'
 
-# Set the directory we want to store zinit and plugins
-ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
+zinit ice lucid depth=1 atload'source ~/.p10k.zsh; _p9k_precmd' nocd
+zinit light romkatv/powerlevel10k
 
-# Download Zinit, if it's not there yet
-if [ ! -d "$ZINIT_HOME" ]; then
-   mkdir -p "$(dirname $ZINIT_HOME)"
-   git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
-fi
+# Turbo load snippets
+zinit wait lucid for \
+    OMZL::git.zsh \
+    OMZL::directories.zsh \
+    OMZL::clipboard.zsh \
+    OMZL::termsupport.zsh \
+    OMZL::functions.zsh \
+    OMZP::copybuffer \
+    OMZP::copyfile \
+    OMZP::copypath \
+    OMZP::dirhistory \
+    OMZP::dotenv \
+    OMZP::extract \
+    OMZP::nmap \
+    OMZP::rsync \
+    OMZP::wakeonlan \
+    OMZP::web-search \
+    OMZP::git \
+    OMZP::sudo \
+    OMZP::kubectl \
+    OMZP::command-not-found 
+    
+#    OMZP::aliases \            # den möchte ich,  aber die svn option ist noch unklar
+#    OMZP::colored-man-pages \ # das ist nicht uninteressant
+#    OMZP::colorize \
+#    OMZP::direnv \            # das probieren wir mal irgendwann aus
+#    OMZP::docker-compose \
+#    OMZP::docker-machine \
+#    OMZP::docker \
+#    OMZP::helm \
+#    OMZP::terraform \
+#    OMZP::tmux \
+#    OMZP::vagrant \
 
-# Source/Load zinit
-source "${ZINIT_HOME}/zinit.zsh"
-
-export ZSH_CUSTOM=$HOME/env/zsh
-
-# Add in Powerlevel10k
-zinit ice depth=1; zinit light romkatv/powerlevel10k
-
-# Add in zsh plugins
-zinit light zsh-users/zsh-syntax-highlighting
-zinit light zsh-users/zsh-completions
-zinit light zsh-users/zsh-autosuggestions
-zinit light Aloxaf/fzf-tab
-zinit light MichaelAquilina/zsh-you-should-use
-zinit light zdharma-continuum/zinit-annex-bin-gem-node
-zinit light zdharma-continuum/zinit-annex-patch-dl
-zinit ice src"fzf-git.sh"
-zinit light junegunn/fzf-git.sh.git
-
-# Add in snippets
-zinit snippet OMZL::directories.zsh
-zinit snippet OMZL::clipboard.zsh
-zinit snippet OMZL::functions.zsh
-# zinit snippet OMZP::aliases           # irgendwie läd er nicht alle Files, noch mal ansehen
-#zinit snippet OMZP::brew               # braucht man das wirklich?
-zinit snippet OMZP::colored-man-pages
-#zinit snippet OMZP::colorize
-zinit snippet OMZP::copybuffer
-zinit snippet OMZP::copyfile
-zinit snippet OMZP::copypath
-#zinit snippet OMZP::direnv             # das probieren wir mal irgendwann aus
-zinit snippet OMZP::dirhistory
-#zinit snippet OMZP::docker-compose
-#zinit snippet OMZP::docker-machine
-#zinit snippet OMZP::docker
-zinit snippet OMZP::dotenv
-zinit snippet OMZP::extract
-#zinit snippet OMZP::helm
-zinit snippet OMZP::nmap
-zinit snippet OMZP::rsync
-#zinit snippet OMZP::terraform
-#zinit snippet OMZP::tmux
-#zinit snippet OMZP::vagrant
-zinit snippet OMZP::wakeonlan
-zinit snippet OMZP::web-search
-zinit snippet OMZP::git
-zinit snippet OMZP::sudo
-zinit snippet OMZP::kubectl
-zinit snippet OMZP::command-not-found
-zinit snippet $ZSH_CUSTOM/login.zsh
-zinit snippet $ZSH_CUSTOM/updateLists.zsh
-zinit snippet $ZSH_CUSTOM/PATH.zsh
-zinit snippet $ZSH_CUSTOM/ssh.zsh
-zinit snippet $ZSH_CUSTOM/locale.zsh
-zinit snippet $ZSH_CUSTOM/history.zsh
-zinit snippet $ZSH_CUSTOM/completions.zsh
-zinit snippet $ZSH_CUSTOM/zoxide.zsh
-zinit snippet $ZSH_CUSTOM/keybindings.zsh
-zinit snippet $ZSH_CUSTOM/you-should-use.zsh
-zinit snippet $ZSH_CUSTOM/proxy.zsh
-zinit snippet $ZSH_CUSTOM/mysql.zsh
-zinit snippet $ZSH_CUSTOM/homebrew.zsh
-zinit snippet $ZSH_CUSTOM/docker.zsh
-zinit snippet $ZSH_CUSTOM/bc.zsh
-zinit snippet $ZSH_CUSTOM/automake.zsh
-zinit snippet $ZSH_CUSTOM/less.zsh
-zinit snippet $ZSH_CUSTOM/aliases.zsh
-zinit snippet $ZSH_CUSTOM/eza.zsh
-zinit snippet $ZSH_CUSTOM/bat.zsh
-zinit snippet $ZSH_CUSTOM/fzf.zsh
-
-zinit load 'zsh-users/zsh-history-substring-search'
-zinit ice wait atload'_history_substring_search_config'
+source ~/env/zsh/history.zsh
+source ~/env/zsh/completions.zsh
+source ~/env/zsh/zoxide.zsh
+source ~/env/zsh/keybindings.zsh
+source ~/env/zsh/you-should-use.zsh
+source ~/env/zsh/proxy.zsh
+source ~/env/zsh/mysql.zsh
+source ~/env/zsh/docker.zsh
+source ~/env/zsh/bc.zsh
+source ~/env/zsh/automake.zsh
+source ~/env/zsh/less.zsh
+source ~/env/zsh/PATH.zsh
+source ~/env/zsh/eza.zsh
+source ~/env/zsh/bat.zsh
+source ~/env/zsh/fzf.zsh
+source ~/env/zsh/k9s.zsh
 
 # Add packages
-zinit pack"binary+keys" for fzf
+zinit wait'!' pack"binary+keys" for fzf
 
 # Load completions
-autoload -Uz compinit && compinit -d $ZSH_COMPDUMP
-
-# update completions
-zinit cdreplay -q
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-# Shell integrations
-eval "$(fzf --zsh)"
-
-# Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
-else
-  export EDITOR='vim'
-fi
-
-# k9s
-export K9S_CONFIG_DIR="~/.config/k9s/config.yaml"
+autoload -Uz _zinit
+(( ${+_comps} )) && _comps[zinit]=_zinit

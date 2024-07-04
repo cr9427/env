@@ -45,3 +45,9 @@ _fzf_comprun() {
     *)            fzf --preview "$show_file_or_dir_preview" "$@" ;;
   esac
 }
+
+# Shell integrations
+eval "$(fzf --zsh)"
+
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
+zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
