@@ -1,7 +1,7 @@
 # set hostname to $HOST
 #
 #echo
-#export HOST=`hostname -s`
+export HOST=`hostname -s`
 #echo "HOST:    $HOST"
 
 # determine OS

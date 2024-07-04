@@ -20,7 +20,6 @@ zinit wait lucid load for \
     zdharma-continuum/zinit-annex-patch-dl \
     MichaelAquilina/zsh-you-should-use \
     Aloxaf/fzf-tab \
-    zdharma-continuum/fast-syntax-highlighting \
   atinit"ZINIT[COMPINIT_OPTS]=-C; zicompinit; zicdreplay" \
     zsh-users/zsh-syntax-highlighting \
   atload"!_zsh_autosuggest_start" \

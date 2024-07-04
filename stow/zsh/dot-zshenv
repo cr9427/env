@@ -10,4 +10,4 @@ export ZINIT[BIN_DIR]=~/.zinit/bin
 export ZINIT[PLUGINS_DIR]=~/.zinit/plugins
 export ZINIT[COMPLETIONS_DIR]=~/.zinit/completions
 export ZINIT[SNIPPETS_DIR]=~/.zinit/snippets
-export ZINIT[ZCOMPDUMP_PATH]=${HOME}/.cache/zcompdump.${HOST}}
+export ZINIT[ZCOMPDUMP_PATH]=${HOME}/.cache/zcompdump.${HOST}
