@@ -5,4 +5,3 @@ preList PATH /usr/local/opt/mysql-client/bin
 preList PATH ${HOME}/run/${OS}/bin
 preList PATH ${HOME}/bin
 appList PATH /opt/puppetlabs/bin
-export PATH

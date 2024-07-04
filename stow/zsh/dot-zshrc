@@ -1,4 +1,3 @@
-source ~/env/zsh/login.zsh
 source ~/env/zsh/aliases.zsh
 source ~/env/zsh/prompt.zsh
 source ~/env/zsh/homebrew.zsh
@@ -94,6 +93,3 @@ source ~/env/zsh/k9s.zsh
 # Load completions
 #autoload -Uz _zinit
 #(( ${+_comps} )) && _comps[zinit]=_zinit
-
-source ~/env/zsh/updateLists.zsh
-source ~/env/zsh/PATH.zsh
