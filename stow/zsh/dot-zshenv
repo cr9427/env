@@ -1,0 +1,9 @@
+# Set the directory we want to store zinit and plugins
+#
+declare -A ZINIT
+ZINIT[HOME_DIR]=~/.zinit
+ZINIT[BIN_DIR]=~/.zinit/bin
+ZINIT[PLUGINS_DIR]=~/.zinit/plugins
+ZINIT[COMPLETIONS_DIR]=~/.zinit/completions
+ZINIT[SNIPPETS_DIR]=~/.zinit/snippets
+ZINIT[ZCOMPDUMP_PATH]=${HOME}/.cache/zcompdump.${HOST}}
