@@ -8,6 +8,10 @@ if [ -d $HOMEBREW_PREFIX/share/zsh-completions ]; then
   fpath=($HOMEBREW_PREFIX/share/zsh-completions $fpath)
 fi
 
+if [ -d $HOME/run/share/zsh-completions ]; then
+  fpath=($HOME/run/share/zsh-completions $fpath)
+fi
+
 # Completion styling
 zstyle ':completion:*' completer _complete
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z} l:|=* r:|=*'
