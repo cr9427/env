@@ -2,8 +2,8 @@
 
 bindkey -e
 if [[ "$OS" =~ "darwin" ]]; then
-    bindkey '^[[A' history-substring-search-up
-    bindkey '^[[B' history-substring-search-down
+    bindkey '^[[A' history-search-backward
+    bindkey '^[[B' history-search-forward
 elif [[ "$OS" =~ "linux" ]]; then
     # https://superuser.com/a/1296543
     # key dict is defined in /etc/zsh/zshrc
