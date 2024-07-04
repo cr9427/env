@@ -1,8 +1,8 @@
 # set hostname to $HOST
 #
-echo
-export HOST=`hostname -s`
-echo "HOST:    $HOST"
+#echo
+#export HOST=`hostname -s`
+#echo "HOST:    $HOST"
 
 # determine OS
 #
@@ -13,15 +13,15 @@ fi
 if [[ -z $OS ]]; then
   echo "OS:      not detectable ... update $HOME/bin/config.guess"
 else
-  echo "OS:      $OS"
+#  echo "OS:      $OS"
   export OS
 fi
 
 # determine HOME
 #
-echo  "home:    $HOME"
+#echo  "home:    $HOME"
 
 # determine SHELL
 #
-echo "shell:   $SHELL"
-echo
+#echo "shell:   $SHELL"
+#echo
