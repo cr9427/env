@@ -1,5 +1,4 @@
 source ~/env/zsh/login.zsh
-source ~/env/zsh/updateLists.zsh
 source ~/env/zsh/aliases.zsh
 source ~/env/zsh/prompt.zsh
 source ~/env/zsh/homebrew.zsh
@@ -32,6 +31,15 @@ zinit ice wait lucid atload'_history_substring_search_config'
 
 zinit ice lucid depth=1 atload'source ~/.p10k.zsh; _p9k_precmd' nocd
 zinit light romkatv/powerlevel10k
+
+zinit ice wait lucid from"gh-r" id-as"fzf" cp"fzf -> ${HOME}/run/${OS}/bin"
+zinit light junegunn/fzf-bin
+zinit ice wait lucid from"gh-r" id-as"fd" mv"fd* -> fd" cp"fd/fd -> ${HOME}/run/${OS}/bin"
+zinit light sharkdp/fd
+zinit ice wait lucid from"gh-r" id-as"bat" mv"bat* -> bat" cp"bat/bat -> ${HOME}/run/${OS}/bin"
+zinit light sharkdp/bat
+zinit ice wait lucid from"gh-r" id-as"zoxide" cp"zoxide -> ${HOME}/run/${OS}/bin"
+zinit light ajeetdsouza/zoxide
 
 # Turbo load snippets
 zinit wait lucid for \
@@ -78,15 +86,14 @@ source ~/env/zsh/docker.zsh
 source ~/env/zsh/bc.zsh
 source ~/env/zsh/automake.zsh
 source ~/env/zsh/less.zsh
-source ~/env/zsh/PATH.zsh
 source ~/env/zsh/eza.zsh
 source ~/env/zsh/bat.zsh
 source ~/env/zsh/fzf.zsh
 source ~/env/zsh/k9s.zsh
 
-# Add packages
-zinit wait'!' pack"binary+keys" for fzf
-
 # Load completions
 #autoload -Uz _zinit
 #(( ${+_comps} )) && _comps[zinit]=_zinit
+
+source ~/env/zsh/updateLists.zsh
+source ~/env/zsh/PATH.zsh
