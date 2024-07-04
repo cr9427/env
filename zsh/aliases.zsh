@@ -9,6 +9,8 @@ fi
 if [[ "${OS}" = "aarch64-unknown-linux-gnu" ]]; then
   alias ll="eza --color=always --long --header --icons=always --smart-group"
   alias la="eza --color=always --long --header --icons=always --smart-group --all"
+if [[ "${OS}" = "armv7l-unknown-linux-gnueabihf" ]]; then
+  return
 else
   alias ll="eza --color=always --long --header --icons=always --smart-group --git --git-repos"
   alias la="eza --color=always --long --header --icons=always --smart-group --all --git --git-repos"
