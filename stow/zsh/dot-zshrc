@@ -5,6 +5,7 @@ source ~/env/zsh/p10k.zsh
 source ~/env/zsh/zinit.zsh
 source ~/env/zsh/ssh.zsh
 source ~/env/zsh/locale.zsh
+source ~/env/zsh/keybindings.zsh
 
 # recommended by https://zdharma-continuum.github.io/zinit/wiki/Example-Oh-My-Zsh-setup/
 #
@@ -19,6 +20,7 @@ zinit wait lucid load for \
     zdharma-continuum/zinit-annex-patch-dl \
     MichaelAquilina/zsh-you-should-use \
     Aloxaf/fzf-tab \
+    zdharma-continuum/fast-syntax-highlighting \
   atinit"ZINIT[COMPINIT_OPTS]=-C; zicompinit; zicdreplay" \
     zsh-users/zsh-syntax-highlighting \
   atload"!_zsh_autosuggest_start" \
@@ -26,7 +28,7 @@ zinit wait lucid load for \
   blockf atpull'zinit creinstall -q .' \
     zsh-users/zsh-completions \
   src"fzf-git.sh" \
-    junegunn/fzf-git.sh.git 
+    junegunn/fzf-git.sh.git
 
 zinit load zsh-users/zsh-history-substring-search
 zinit ice wait lucid atload'_history_substring_search_config'
@@ -77,7 +79,6 @@ zinit wait lucid for \
 source ~/env/zsh/history.zsh
 source ~/env/zsh/completions.zsh
 source ~/env/zsh/zoxide.zsh
-source ~/env/zsh/keybindings.zsh
 source ~/env/zsh/you-should-use.zsh
 source ~/env/zsh/proxy.zsh
 source ~/env/zsh/mysql.zsh
