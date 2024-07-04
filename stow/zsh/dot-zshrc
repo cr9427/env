@@ -90,5 +90,5 @@ source ~/env/zsh/fzf.zsh
 source ~/env/zsh/k9s.zsh
 
 # Load completions
-autoload -Uz _zinit
-(( ${+_comps} )) && _comps[zinit]=_zinit
+#autoload -Uz _zinit
+#(( ${+_comps} )) && _comps[zinit]=_zinit
