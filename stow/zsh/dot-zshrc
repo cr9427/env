@@ -1,5 +1,4 @@
 source ~/env/zsh/prompt.zsh
-source ~/env/zsh/homebrew.zsh
 source ~/env/zsh/p10k.zsh
 source ~/env/zsh/zinit.zsh
 source ~/env/zsh/ssh.zsh

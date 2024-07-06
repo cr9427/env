@@ -1,5 +1,6 @@
 source ~/env/zsh/login.zsh
 source ~/env/zsh/updateLists.zsh
+source ~/env/zsh/homebrew.zsh
 source ~/env/zsh/PATH.zsh
 
 # Set the directory we want to store zinit and plugins
