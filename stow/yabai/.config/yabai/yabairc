@@ -75,3 +75,4 @@ yabai -m rule --add app="^iTerm2$" space=^work
 yabai -m rule --add app="^Notizen$" title!="^Neue Notiz$" space=^notes manage=on sticky=off
 yabai -m rule --add app="^Notizen$" title="^Neue Notiz$" manage=off sticky=on sub-layer=above
 yabai -m rule --add app="^LibreOffice$" space=^etc manage=on sticky=off sub-layer=normal
+yabai -m rule --add app="^OrbStack$" space=^etc manage=on sticky=off sub-layer=normal
