@@ -88,6 +88,7 @@ source ~/env/zsh/bat.zsh
 source ~/env/zsh/fzf.zsh
 source ~/env/zsh/k9s.zsh
 source ~/env/zsh/xca.zsh
+source ~/env/zsh/step.zsh
 
 # Load completions
 #autoload -Uz _zinit
