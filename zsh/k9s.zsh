@@ -1,2 +1,2 @@
 # k9s
-export K9S_CONFIG_DIR="~/.config/k9s/config.yaml"
+export K9S_CONFIG_DIR=~/.config/k9s

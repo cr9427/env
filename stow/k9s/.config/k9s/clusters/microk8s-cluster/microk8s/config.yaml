@@ -1,0 +1,13 @@
+k9s:
+  cluster: microk8s-cluster
+  namespace:
+    active: all
+    lockFavorites: false
+    favorites:
+    - all
+    - default
+  view:
+    active: po
+  featureGates:
+    nodeShell: false
+  portForwardAddress: localhost
