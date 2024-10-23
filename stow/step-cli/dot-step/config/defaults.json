@@ -1,0 +1,6 @@
+{
+  "ca-url": "https://ca.crylle.local:4000",
+  "fingerprint": "a568d439025e33f577fef50bbfbe65a83a40c7f3b01ac3b46b5a03f3e081779d",
+  "root": "/Users/holm/.step/certs/root_ca.crt",
+  "redirect-url": ""
+}
