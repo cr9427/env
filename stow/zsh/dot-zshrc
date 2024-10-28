@@ -29,11 +29,14 @@ zinit wait lucid load for \
 
 #zinit light zsh-users/zsh-history-substring-search
 #zinit ice lucid atload'_history_substring_search_config'
-zinit ice wait lucid from"gh-r" id-as"fzf" cp"fzf -> ${HOME}/run/${OS}/bin" if'[[ -z "$commands[fzf]" ]]'
+
+zinit ice wait lucid from"gh-r" id-as"fzf-$OS" cp"fzf -> ${HOME}/run/${OS}/bin"
 zinit light junegunn/fzf-bin
-zinit ice wait lucid from"gh-r" id-as"fd" mv"fd* -> fd" cp"fd/fd -> ${HOME}/run/${OS}/bin" if'[[ -z "$commands[fd]" ]]'
+
+zinit ice wait lucid from"gh-r" id-as"fd-$OS" mv"fd* -> fd" cp"fd/fd -> ${HOME}/run/${OS}/bin"
 zinit light sharkdp/fd
-zinit ice wait lucid from"gh-r" id-as"bat" mv"bat* -> bat" cp"bat/bat -> ${HOME}/run/${OS}/bin" if'[[ -z "$commands[bat]" ]]'
+
+zinit ice wait lucid from"gh-r" id-as"bat-$OS" mv"bat* -> bat" cp"bat/bat -> ${HOME}/run/${OS}/bin"
 zinit light sharkdp/bat
 
 zinit ice wait lucid from"gh-r" id-as"zoxide-$OS" cp"zoxide -> ${HOME}/run/${OS}/bin"
