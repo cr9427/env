@@ -1,2 +1,3 @@
 stow/etc/bin/*
 stow/step-cli/dot-step/config/defaults.json
+stow/ssh/.ssh/config
