@@ -13,7 +13,7 @@ zinit light romkatv/powerlevel10k
 
 
 # Turbo load plugins
-zinit wait lucid load for \
+zinit wait lucid id-as load for \
     zdharma-continuum/zinit-annex-bin-gem-node \
     zdharma-continuum/zinit-annex-patch-dl \
     MichaelAquilina/zsh-you-should-use \
