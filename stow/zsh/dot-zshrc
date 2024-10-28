@@ -31,7 +31,7 @@ zinit wait lucid load for \
 #zinit ice lucid atload'_history_substring_search_config'
 
 zinit ice wait lucid from"gh-r" id-as"fzf-$OS" cp"fzf -> ${HOME}/run/${OS}/bin"
-zinit light junegunn/fzf-bin
+zinit light junegunn/fzf
 
 zinit ice wait lucid from"gh-r" id-as"fd-$OS" mv"fd* -> fd" cp"fd/fd -> ${HOME}/run/${OS}/bin"
 zinit light sharkdp/fd
