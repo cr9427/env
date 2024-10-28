@@ -1,0 +1,12 @@
+# Automatically log in to this mailbox at startup
+set imap_user=holm@crylle.net
+set imap_pass=EcinCishUMbIstEnETrIlEASsiSkeNgE,14,_
+# Define the = shortcut, and the entry point for the folder browser (c?)
+set folder="imaps://mailcow.wewitro.net:993"
+set spoolfile = "=INBOX"
+set record="=Sent"
+set postponed="=Drafts"
+mailboxes /var/spool/mail
+mailboxes imaps://mailcow.wewitro.net/INBOX
+mailboxes imaps://mailcow.wewitro.net/INBOX/1822
+
