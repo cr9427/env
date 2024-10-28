@@ -35,7 +35,8 @@ zinit ice wait lucid from"gh-r" id-as"fd" mv"fd* -> fd" cp"fd/fd -> ${HOME}/run/
 zinit light sharkdp/fd
 zinit ice wait lucid from"gh-r" id-as"bat" mv"bat* -> bat" cp"bat/bat -> ${HOME}/run/${OS}/bin" if'[[ -z "$commands[bat]" ]]'
 zinit light sharkdp/bat
-zinit ice wait lucid from"gh-r" id-as"zoxide" cp"zoxide -> ${HOME}/run/${OS}/bin" if'[[ -z "$commands[zoxide]" ]]'
+
+zinit ice wait lucid from"gh-r" id-as"zoxide-$OS" cp"zoxide -> ${HOME}/run/${OS}/bin"
 zinit light ajeetdsouza/zoxide
 
 # Turbo load snippets
