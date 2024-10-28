@@ -8,7 +8,7 @@ source ~/env/zsh/locale.zsh
 #
 setopt promptsubst
 
-zinit ice lucid depth=1 atload'source ~/.p10k.zsh; _p9k_precmd' nocd
+zinit ice lucid depth=1 atload'source ~/.p10k.zsh; _p9k_precmd' nocd id-as
 zinit light romkatv/powerlevel10k
 
 
