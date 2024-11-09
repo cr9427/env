@@ -4,11 +4,11 @@ export ZINIT[BIN_DIR]=${HOME}/run/share/zinit/zinit.git
 
 # Download Zinit, if it's not there yet
 #
-if [ ! -d "$ZINIT_BIN" ]; then
-   mkdir -p "$(dirname $ZINIT_BIN)"
-   git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_BIN"
+if [ ! -d "$ZINIT[BIN_DIR]" ]; then
+   mkdir -p "$(dirname $ZINIT[BIN_DIR])"
+   git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT[BIN_DIR]"
 fi
 
 # Source/Load zinit
 #
-source "${ZINIT_BIN}/zinit.zsh"
+source "${ZINIT[BIN_DIR]}/zinit.zsh"
