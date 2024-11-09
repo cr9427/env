@@ -1,14 +1,15 @@
-source ~/env/zsh/login.zsh
-source ~/env/zsh/updateLists.zsh
-source ~/env/zsh/homebrew.zsh
-source ~/env/zsh/PATH.zsh
+source ${HOME}/env/zsh/login.zsh
+source ${HOME}/env/zsh/updateLists.zsh
+source ${HOME}/env/zsh/homebrew.zsh
+source ${HOME}/env/zsh/PATH.zsh
 
-# Set the directory we want to store zinit and plugins
-#
 declare -A ZINIT
-export ZINIT[HOME_DIR]=~/.zinit
-export ZINIT[BIN_DIR]=~/.zinit/bin
-export ZINIT[PLUGINS_DIR]=~/.zinit/plugins
-export ZINIT[COMPLETIONS_DIR]=~/.zinit/completions
-export ZINIT[SNIPPETS_DIR]=~/.zinit/snippets
+export ZPFX=${HOME}/run/${OS}
+export ZINIT[BIN_DIR]=${HOME}/run/share/zinit/zinit.git
+export ZINIT[HOME_DIR]=${HOME}/run/share/zinit
+export ZINIT[PLUGINS_DIR]=${ZINIT[HOME_DIR]}/plugins/${OS}
+export ZINIT[MAN_DIR]=${HOME}/run/man
+export ZINIT[COMPLETIONS_DIR]=${HOME}/run/share/zsh-completions
 export ZINIT[ZCOMPDUMP_PATH]=${HOME}/.cache/zcompdump.${HOST}
+export ZINIT[NO_ALIASES]=1
+export ZINIT[OPTIMIZE_OUT_DISK_ACCESSES]=1
