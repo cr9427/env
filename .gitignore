@@ -3,6 +3,7 @@ stow/htop/.config/htop/htoprc
 stow/mc/.config/mc/ini
 stow/ssh/.ssh/authorized_keys
 stow/ssh/.ssh/config
+stow/ssh/.ssh/known_hosts
 stow/step-cli/dot-step/config/defaults.json
 stow/etc/run/*/bin/*
 #stow/etc/run/arm-apple-darwin24.0.0/include
