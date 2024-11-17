@@ -1,14 +1,17 @@
-source ~/env/zsh/prompt.zsh
-source ~/env/zsh/p10k.zsh
-source ~/env/zsh/zinit.zsh
-source ~/env/zsh/ssh.zsh
-source ~/env/zsh/locale.zsh
+source ${HOME}/env/zsh/prompt.zsh
+source ${HOME}/env/zsh/p10k.zsh
+source ${HOME}/env/zsh/homebrew.zsh
+source ${HOME}/env/zsh/ssh.zsh
+source ${HOME}/env/zsh/locale.zsh
+source ${HOME}/env/zsh/updateLists.zsh
+source ${HOME}/env/zsh/PATH.zsh
+source ${HOME}/env/zsh/zinit.zsh
 
 # recommended by https://zdharma-continuum.github.io/zinit/wiki/Example-Oh-My-Zsh-setup/
 #
 setopt promptsubst
 
-zinit ice lucid depth=1 atload'source ~/.p10k.zsh; _p9k_precmd' nocd id-as
+zinit ice lucid depth=1 atload'source ${HOME}/.p10k.zsh; _p9k_precmd' nocd id-as
 zinit light romkatv/powerlevel10k
 
 
@@ -75,23 +78,23 @@ zinit wait lucid for \
 #    OMZP::tmux \
 #    OMZP::vagrant \
 
-source ~/env/zsh/directories.zsh
-source ~/env/zsh/aliases.zsh
-source ~/env/zsh/history.zsh
-source ~/env/zsh/keybindings.zsh
-source ~/env/zsh/completions.zsh
-source ~/env/zsh/zoxide.zsh
-source ~/env/zsh/you-should-use.zsh
-source ~/env/zsh/proxy.zsh
-source ~/env/zsh/mysql.zsh
-source ~/env/zsh/docker.zsh
-source ~/env/zsh/bc.zsh
-source ~/env/zsh/automake.zsh
-source ~/env/zsh/less.zsh
-source ~/env/zsh/bat.zsh
-source ~/env/zsh/fzf.zsh
-source ~/env/zsh/k9s.zsh
-source ~/env/zsh/xca.zsh
+source ${HOME}/env/zsh/directories.zsh
+source ${HOME}/env/zsh/aliases.zsh
+source ${HOME}/env/zsh/history.zsh
+source ${HOME}/env/zsh/keybindings.zsh
+source ${HOME}/env/zsh/completions.zsh
+source ${HOME}/env/zsh/zoxide.zsh
+source ${HOME}/env/zsh/you-should-use.zsh
+source ${HOME}/env/zsh/proxy.zsh
+source ${HOME}/env/zsh/mysql.zsh
+source ${HOME}/env/zsh/docker.zsh
+source ${HOME}/env/zsh/bc.zsh
+source ${HOME}/env/zsh/automake.zsh
+source ${HOME}/env/zsh/less.zsh
+source ${HOME}/env/zsh/bat.zsh
+source ${HOME}/env/zsh/fzf.zsh
+source ${HOME}/env/zsh/k9s.zsh
+source ${HOME}/env/zsh/xca.zsh
 
 # Load completions
 #autoload -Uz _zinit

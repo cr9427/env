@@ -1,7 +1,4 @@
 source ${HOME}/env/zsh/login.zsh
-source ${HOME}/env/zsh/updateLists.zsh
-source ${HOME}/env/zsh/homebrew.zsh
-source ${HOME}/env/zsh/PATH.zsh
 
 declare -A ZINIT
 export ZPFX=${HOME}/run/${OS}
