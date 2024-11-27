@@ -31,4 +31,4 @@ MAILTO="admin+cron@crylle.net"
 @daily xca --no-gui --database=xca@sql.crylle.local:3306/QMYSQL:xca_ca --sqlpass=file:${HOME}/.config/xca/sql-pwd --password=file:${HOME}/.config/xca/pwd --crlgen=12 --pem --print > /nas/www/ca.crl
 @daily xca --no-gui --database=xca@sql.crylle.local:3306/QMYSQL:xca_ca --sqlpass=file:${HOME}/.config/xca/sql-pwd --password=file:${HOME}/.config/xca/pwd --crlgen=93 --pem --print > /nas/www/ca2.crl
 @daily xca --no-gui --database=xca@sql.crylle.local:3306/QMYSQL:xca_ca --sqlpass=file:${HOME}/.config/xca/sql-pwd --password=file:${HOME}/.config/xca/pwd --crlgen="Crylle Root CA3" --pem --print > /nas/www/ca3.crl
-1  2 * * * zsh ~/bin/mysqldump_backup_schema_3306.sh > /dev/null
+1  2 * * * ~/bin/mysqldump_backup_schema.sh > /dev/null
