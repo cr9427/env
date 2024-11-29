@@ -1,1 +1,1 @@
-eval "$(step completion zsh)"
+# eval "$(step completion zsh)"
