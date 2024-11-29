@@ -3,6 +3,7 @@ source ${HOME}/env/zsh/p10k.zsh
 source ${HOME}/env/zsh/homebrew.zsh
 source ${HOME}/env/zsh/ssh.zsh
 source ${HOME}/env/zsh/locale.zsh
+source ${HOME}/env/zsh/step-cli.zsh
 source ${HOME}/env/zsh/updateLists.zsh
 source ${HOME}/env/zsh/PATH.zsh
 source ${HOME}/env/zsh/zinit.zsh
