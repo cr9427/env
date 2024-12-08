@@ -32,3 +32,5 @@ MAILTO="admin+cron@crylle.net"
 @daily xca --no-gui --database=xca@sql.crylle.local:3306/QMYSQL:xca_ca --sqlpass=file:${HOME}/.config/xca/sql-pwd --password=file:${HOME}/.config/xca/pwd --crlgen=93 --pem --print > /nas/www/ca2.crl
 @daily xca --no-gui --database=xca@sql.crylle.local:3306/QMYSQL:xca_ca --sqlpass=file:${HOME}/.config/xca/sql-pwd --password=file:${HOME}/.config/xca/pwd --crlgen="Crylle Root CA3" --pem --print > /nas/www/ca3.crl
 1  2 * * * ~/bin/mysqldump_backup_schema.sh > /dev/null
+# apt-cacher-ng maintanance
+45 22 * * sun curl "http://apt-cache.crylle.local:3142/acng-report.html?abortOnErrors=aOe&byPath=bP&byChecksum=bS&truncNow=tN&incomAsDamaged=iad&purgeNow=pN&doExpire=Start+Scan+and%2For+Expiration&calcSize=cs&asNeeded=an#bottom"
