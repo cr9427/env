@@ -1,6 +1,7 @@
 [client]
 password
 user=root
+host=sql.home.crylle.net
 default-character-set=utf8mb4
 port=3306
 ssl
