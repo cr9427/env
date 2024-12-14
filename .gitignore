@@ -24,3 +24,5 @@ stow/etc/run/man/man8/*
 stow/etc/run/man/manl/*
 stow/etc/run/man/mann/*
 stow/etc/run/share/*
+stow/k9s/.config/k9s/clusters/*/config.yaml
+stow/k9s/.config/k9s/clusters/**/config.yaml

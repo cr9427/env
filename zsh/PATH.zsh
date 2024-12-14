@@ -10,5 +10,6 @@ appList PATH /usr/sbin
 appList PATH /sbin
 appList PATH /opt/puppetlabs/bin
 
+export  DYLD_LIBRARY_PATH="-L"
 appList DYLD_LIBRARY_PATH /opt/homebrew/opt/mariadb-connector-c/lib
 appList DYLD_LIBRARY_PATH /opt/homebrew/lib
