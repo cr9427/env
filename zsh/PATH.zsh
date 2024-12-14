@@ -9,3 +9,6 @@ appList PATH /usr/local/sbin
 appList PATH /usr/sbin
 appList PATH /sbin
 appList PATH /opt/puppetlabs/bin
+
+appList DYLD_LIBRARY_PATH /opt/homebrew/opt/mariadb-connector-c/lib
+appList DYLD_LIBRARY_PATH /opt/homebrew/lib
