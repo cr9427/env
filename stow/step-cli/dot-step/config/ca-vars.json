@@ -1,0 +1,12 @@
+{
+  "Subject": {
+    "Country": "DE",
+    "Province": "Berlin",
+    "Locality": "Berlin",
+    "Organization": "Crylle",
+    "OrganizationalUnit": "Certificate Authority"
+  },
+  "issuingCertificateURL": "http://www.home.crylle.net/ca4.crt",
+  "crlDistributionPoints": "http://www.home.crylle.net/ca4.crl",
+  "OCSPServer": "http://localhost"
+}
