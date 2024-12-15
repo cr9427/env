@@ -1,5 +1,5 @@
 {
-  "ca-url": "https://ca.home.crylle.net:4001",
+  "ca-url": "https://ca.home.crylle.net:4000",
   "fingerprint": "5826f5a82e8cc284a5f90cb14384d53ba598e7beddda4742f28731c6c9b63aa9",
   "root": "/Users/holm/.step/certs/root_ca4.crt",
   "redirect-url": ""
