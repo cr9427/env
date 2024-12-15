@@ -94,6 +94,7 @@ source ${HOME}/env/zsh/automake.zsh
 source ${HOME}/env/zsh/less.zsh
 source ${HOME}/env/zsh/bat.zsh
 source ${HOME}/env/zsh/fzf.zsh
+source ${HOME}/env/zsh/k8s.zsh
 source ${HOME}/env/zsh/k9s.zsh
 source ${HOME}/env/zsh/xca.zsh
 
