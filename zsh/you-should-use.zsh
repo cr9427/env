@@ -1,5 +1,5 @@
 export YSU_MESSAGE_POSITION="after"
 # export YSU_MODE=BESTMATCH
 export YSU_MODE=ALL
-export YSU_IGNORED_ALIASES=("g" "ll" "k")
+export YSU_IGNORED_ALIASES=("g" "ll" "k" "xca")
 export YSU_HARDCORE=1
