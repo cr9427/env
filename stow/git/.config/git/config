@@ -3,6 +3,7 @@
 [user]
   name = Holm der Kannenzwerg
   email = hk@crylle.net
+	signingkey = B69D6FAB02C2CCB965E35A050AB109A3E6B52E13
 [core]
   editor = vi
   excludesFile = ~/.config/git/ignore
@@ -46,3 +47,7 @@
   insteadOf = "https://github.com/cr9427"
 [url "git@git.local.crylle.net:"]
   insteadOf = "https://git.local.crylle.net/"
+[commit]
+	gpgsign = true
+[tag]
+	gpgSign = true
