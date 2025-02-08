@@ -35,4 +35,5 @@ CONTENT_TYPE="text/html; charset=utf-8"
 # apt-cacher-ng maintanance
 21 22 * * sun curl "http://apt-cache.crylle.local:3142/acng-report.html?abortOnErrors=aOe&byPath=bP&byChecksum=bS&truncNow=tN&incomAsDamaged=iad&purgeNow=pN&doExpire=Start+Scan+and\%2For+Expiration&calcSize=cs&asNeeded=an#bottom"
 # imap-scrubbing
+# https://github.com/axllent/imap-scrub.git
 3 4 * * * for file in $HOME/.config/imap-scrub/**/*(.); $HOME/work/imap-scrub-linux-amd64/imap-scrub -y $file && echo
