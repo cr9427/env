@@ -48,6 +48,6 @@
 [url "git@git.local.crylle.net:"]
   insteadOf = "https://git.local.crylle.net/"
 [commit]
-	gpgsign = false
+	gpgsign = true
 [tag]
 	gpgSign = true
