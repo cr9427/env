@@ -57,6 +57,8 @@ zinit wait lucid for \
     OMZP::copyfile \
     OMZP::copypath \
     OMZP::dirhistory \
+    OMZP::docker-compose \
+    OMZP::docker \
     OMZP::dotenv \
     OMZP::extract \
     OMZP::nmap \
@@ -66,7 +68,10 @@ zinit wait lucid for \
     OMZP::git \
     OMZP::sudo \
     OMZP::kubectl \
-    OMZP::command-not-found
+    OMZP::command-not-found \
+  as"completion" \
+    OMZP::docker/completions/_docker \
+    OMZP::docker-compose/_docker-compose
     
 #    OMZP::aliases \            # den möchte ich,  aber die svn option ist noch unklar
 #    OMZP::colored-man-pages \ # das ist nicht uninteressant

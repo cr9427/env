@@ -18,3 +18,5 @@ function denter() {
 
 export DOCKER_HOST=tcp://nas.crylle.local:2376
 export DOCKER_TLS_VERIFY=1
+
+alias docker-pull-all-images="docker images | awk '(NR>1) && ($2!~/none/) {print $1":"$2}' | xargs -L1 docker pull"
