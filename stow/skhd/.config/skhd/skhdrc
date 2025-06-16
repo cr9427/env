@@ -63,3 +63,8 @@ shift + cmd - 5 : yabai -m window --space 5 --focus
 ## rotate windows in a space
 cmd - j : yabai_cycle_clockwise.sh
 cmd - k : yabai_cycle_counterclockwise.sh
+
+.blacklist [
+   "code"
+]
+
