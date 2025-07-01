@@ -3,7 +3,7 @@
 [user]
   name = Holm der Kannenzwerg
   email = hk@crylle.net
-	signingkey = B69D6FAB02C2CCB965E35A050AB109A3E6B52E13
+	signingkey = C36B4C921523F64A3ADCAE2D487F6C3906B1C74C
 [core]
   editor = vi
   excludesFile = ~/.config/git/ignore
