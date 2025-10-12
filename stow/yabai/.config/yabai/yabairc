@@ -18,8 +18,9 @@ yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
 # mission-control desktop labels
 yabai -m space 1 --label web
 yabai -m space 2 --label work
-yabai -m space 3 --label mail
-yabai -m space 4 --label notes
+yabai -m space 3 --label code
+yabai -m space 4 --label mail
+yabai -m space 5 --label notes
 yabai -m space 5 --label etc
 
 # specific space settings
@@ -76,4 +77,4 @@ yabai -m rule --add app="^Notizen$" title!="^Neue Notiz$" space=^notes manage=on
 yabai -m rule --add app="^Notizen$" title="^Neue Notiz$" manage=off sticky=on sub-layer=above
 yabai -m rule --add app="^LibreOffice$" space=^etc manage=on sticky=off sub-layer=normal
 yabai -m rule --add app="^OrbStack$" space=^etc manage=on sticky=off sub-layer=normal
-yabai -m rule --add app="^Code$" space=^notes manage=on sticky=off sub-layer=normal
+yabai -m rule --add app="^Code$" space=^code manage=on sticky=off sub-layer=normal
