@@ -15,17 +15,23 @@
 	<key>Battery_battery_additional</key>
 	<string>none</string>
 	<key>Battery_battery_position</key>
-	<integer>1</integer>
+	<integer>0</integer>
+	<key>Battery_color</key>
+	<false/>
 	<key>Battery_label_position</key>
 	<integer>2</integer>
 	<key>Battery_mini_position</key>
-	<integer>0</integer>
+	<integer>1</integer>
+	<key>Battery_notifications_high</key>
+	<string></string>
+	<key>Battery_notifications_low</key>
+	<string>low</string>
 	<key>Battery_oneView</key>
 	<true/>
 	<key>Battery_state</key>
 	<true/>
 	<key>Battery_widget</key>
-	<string>mini,battery</string>
+	<string>battery</string>
 	<key>CPU_barChart_position</key>
 	<integer>3</integer>
 	<key>CPU_label_position</key>
@@ -104,18 +110,34 @@
 	<string>mini</string>
 	<key>LaunchAtLoginNext</key>
 	<true/>
-	<key>NSNavLastRootDirectory</key>
-	<string>~/Documents</string>
 	<key>NSNavPanelExpandedSizeForSaveMode</key>
-	<string>{800, 448}</string>
+	<string>{817, 448}</string>
+	<key>NSOSPLastRootDirectory</key>
+	<data>
+	Ym9va/wCAAAAAAQQMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA1AEA
+	AAQAAAADAwAAAAQAAAUAAAABAQAAVXNlcnMAAAAEAAAAAQEAAGhvbG0JAAAAAQEAAERv
+	Y3VtZW50cwAAAAwAAAABBgAAEAAAACAAAAAsAAAACAAAAAQDAABIQgAAAAAAAAgAAAAE
+	AwAAcmoAAAAAAAAIAAAABAMAAKNqAAAAAAAADAAAAAEGAABUAAAAZAAAAHQAAAAIAAAA
+	AAQAAEHF1gPBgAAAGAAAAAECAAACAAAAAAAAAB8CAAAAAAAAHwIAAAAAAAAAAAAAAQUA
+	AAgAAAAEAwAAAQAAAAAAAAAEAAAAAwMAAPUBAAAIAAAAAQkAAGZpbGU6Ly8vDAAAAAEB
+	AABNYWNpbnRvc2ggSEQIAAAABAMAAABQoRtzAAAACAAAAAAEAABBx0KQYgAAACQAAAAB
+	AQAANjNFQkMxNTEtQTAwOC00Q0U1LTlBMEItMThDRDdGQTVFRkM2GAAAAAECAACBAAAA
+	AQAAAO8TAAABAAAA7xMAAAEAAAABAAAAAQEAAC8AAAAJAAAAAQEAAERva3VtZW50ZQAA
+	ADAAAAABAgAAZG5pYgAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAc2NvZAIA
+	AAAAAAAA8AAAAP7///8BAAAAAAAAABMAAAAEEAAAQAAAAAAAAAAFEAAAhAAAAAAAAAAQ
+	EAAAqAAAAAAAAABAEAAAmAAAAAAAAAACIAAAfAEAAAAAAAAFIAAA7AAAAAAAAAAQIAAA
+	/AAAAAAAAAARIAAAMAEAAAAAAAASIAAAEAEAAAAAAAATIAAAIAEAAAAAAAAgIAAAXAEA
+	AAAAAAAwIAAAyAAAAAAAAAABwAAA0AAAAAAAAAARwAAAIAAAAAAAAAASwAAA4AAAAAAA
+	AAAB0AAAyAAAAAAAAAAQ0AAABAAAAAAAAAAX8AAAiAEAAAAAAAAi8AAAnAEAAAAAAAA=
+	</data>
 	<key>NSStatusItem Preferred Position Battery</key>
-	<real>271</real>
+	<real>334</real>
 	<key>NSStatusItem Preferred Position CPU_mini</key>
-	<real>402</real>
+	<real>498</real>
 	<key>NSStatusItem Preferred Position Clock_sensors</key>
-	<real>78</real>
+	<real>86</real>
 	<key>NSStatusItem Preferred Position RAM_mini</key>
-	<real>355</real>
+	<real>451</real>
 	<key>NSStatusItem Restore Position GPU_mini</key>
 	<integer>437</integer>
 	<key>NSStatusItem Restore Position Network_speed</key>
@@ -132,7 +154,7 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSNavPanelAutosaveName</key>
-	<string>335 352 800 448 0 0 1470 918 </string>
+	<string>871 720 817 448 0 0 2560 1409 </string>
 	<key>Network_base</key>
 	<string>bit</string>
 	<key>Network_label_position</key>
@@ -151,6 +173,8 @@
 	<string>speed</string>
 	<key>RAM_barChart_position</key>
 	<integer>3</integer>
+	<key>RAM_combinedProcesses</key>
+	<true/>
 	<key>RAM_label_position</key>
 	<integer>1</integer>
 	<key>RAM_lineChart_position</key>
@@ -179,13 +203,13 @@
 	<true/>
 	<key>setupProcess</key>
 	<true/>
+	<key>support_ts</key>
+	<integer>1761303316</integer>
 	<key>telemetry</key>
 	<false/>
-	<key>telemetry_id</key>
-	<string>5941B412-458F-450E-A734-6D35B5D8770C</string>
 	<key>updater_check_ts</key>
-	<integer>1718102490</integer>
+	<integer>1761303316</integer>
 	<key>version</key>
-	<string>2.10.17</string>
+	<string>2.11.57</string>
 </dict>
 </plist>
