@@ -43,11 +43,11 @@
   submodulesummary = 1
 [submodule]
   recurse = true
-[url "git@github.com:cr9427"]
-  insteadOf = "https://github.com/cr9427"
-[url "git@git.local.crylle.net:"]
-  insteadOf = "https://git.local.crylle.net/"
+# [url "git@github.com:cr9427"]
+#   insteadOf = "https://github.com/cr9427"
+# [url "git@git.local.crylle.net:"]
+#   insteadOf = "https://git.local.crylle.net/"
 [commit]
-	gpgsign = true
+	gpgsign = false
 [tag]
-	gpgSign = true
+	gpgSign = false
