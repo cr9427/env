@@ -6,3 +6,4 @@ stow/etc/run/man/
 **/zsh-completions
 **/*-apple-*
 **/*-linux-*
+**/k9s/clusters/
