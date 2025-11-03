@@ -1,0 +1,53 @@
+# Put this in your ~/.gitconfig or ~/.config/git/config
+# Windows users: "~" is your profile's home directory, e.g. C:\Users\<YourName>
+[user]
+#  name = Holm der Kannenzwerg
+#  email = hk@crylle.net
+#	signingkey = C36B4C921523F64A3ADCAE2D487F6C3906B1C74C
+[core]
+  editor = vi
+  excludesFile = ~/.config/git/ignore
+  autocrlf = input
+  pager = cat
+[alias]
+  c = commit
+  ca = commit -a
+  cm = commit -m
+  cam = commit -am
+  co = checkout
+  cob = checkout -b
+  d = diff
+  dc = diff --cached
+  l = log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit
+  # F*ck the policy
+  wip = commit --amend --no-edit --reset-author --no-verify
+[color]
+  # Enable colors in color-supporting terminals
+  ui = auto
+  branch = auto
+  diff = auto
+  interactive = auto
+  status = auto
+[init]
+  defaultBranch = main
+[pull]
+  rebase = true
+[diff]
+  # Use better, descriptive initials (c, i, w) instead of a/b.
+  mnemonicPrefix = true
+  # Show renames/moves as such
+  renames = true
+  # Display submodule-related information (commit listings)
+  submodule = log
+[status]
+  submodulesummary = 1
+[submodule]
+  recurse = true
+# [url "git@github.com:cr9427"]
+#   insteadOf = "https://github.com/cr9427"
+# [url "git@git.local.crylle.net:"]
+#   insteadOf = "https://git.local.crylle.net/"
+# [commit]
+# 	gpgsign = true
+# [tag]
+# 	gpgSign = true
