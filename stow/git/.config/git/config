@@ -51,3 +51,5 @@
 	gpgsign = false
 [tag]
 	gpgSign = false
+[push]
+	autoSetupRemote = true
