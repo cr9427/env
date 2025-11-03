@@ -1,9 +1,9 @@
 # Put this in your ~/.gitconfig or ~/.config/git/config
 # Windows users: "~" is your profile's home directory, e.g. C:\Users\<YourName>
 [user]
-#  name = Holm der Kannenzwerg
-#  email = hk@crylle.net
-#	signingkey = C36B4C921523F64A3ADCAE2D487F6C3906B1C74C
+  name = Holm der Kannenzwerg
+  email = hk@crylle.net
+	signingkey = C36B4C921523F64A3ADCAE2D487F6C3906B1C74C
 [core]
   editor = vi
   excludesFile = ~/.config/git/ignore
@@ -43,11 +43,11 @@
   submodulesummary = 1
 [submodule]
   recurse = true
-# [url "git@github.com:cr9427"]
-#   insteadOf = "https://github.com/cr9427"
-# [url "git@git.local.crylle.net:"]
-#   insteadOf = "https://git.local.crylle.net/"
-# [commit]
-# 	gpgsign = true
-# [tag]
-# 	gpgSign = true
+[url "git@github.com:cr9427"]
+  insteadOf = "https://github.com/cr9427"
+[url "git@git.local.crylle.net:"]
+  insteadOf = "https://git.local.crylle.net/"
+[commit]
+	gpgsign = true
+[tag]
+	gpgSign = true
